@@ -1,0 +1,28 @@
+{
+  "name": "tartare-logs",
+  "version": "0.1.0",
+  "description": "Watch log files parsing their content according to a given pattern",
+  "license": "Apache-2.0",
+  "author": "Jose Antonio Rodríguez Fernández <joseantonio.rodriguezfernandez@telefonica.com>",
+  "main": "./index",
+  "scripts": {
+    "lint": "jscs index.js lib && eslint index.js lib",
+    "prepublish": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/telefonicaid/tartare-logs.git"
+  },
+  "bugs": "https://github.com/telefonicaid/tartare-logs/issues",
+  "engines": {
+    "node": ">=0.10",
+    "npm": ">=1.4.0"
+  },
+  "keywords": [
+    "testing",
+    "QA",
+    "acceptance",
+    "logs",
+    "watch"
+  ]
+}

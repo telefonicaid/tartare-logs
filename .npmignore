@@ -1,0 +1,7 @@
+test/
+node_modules/
+.idea/
+.gitignore
+.npmignore
+.jscsrc
+.eslintrc
