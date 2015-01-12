@@ -6,8 +6,7 @@
   "author": "Jose Antonio Rodríguez Fernández <joseantonio.rodriguezfernandez@telefonica.com>",
   "main": "./index",
   "scripts": {
-    "lint": "jscs index.js lib && eslint index.js lib",
-    "prepublish": "npm run lint"
+    "lint": "jscs index.js lib && eslint index.js lib"
   },
   "repository": {
     "type": "git",
@@ -24,5 +23,9 @@
     "acceptance",
     "logs",
     "watch"
-  ]
+  ],
+  "dependencies": {
+    "rimraf": "2.2.8",
+    "watchr": "2.4.12"
+  }
 }
