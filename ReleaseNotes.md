@@ -1,5 +1,9 @@
 # RELEASE NOTES
 
+## v0.1.1 / 20 Feb 2015
+* Avoid reading already read data (sometimes the underlying watcher reports wrong stats, overlapping ranges).
+* Support reading logs whose lines are not completely written at the time the watcher reports a change in the file.
+
 ## v0.1.0 / 13 Feb 2015
 * `LogWatcher` class watches a log file to read new logged entries and, optionally parse each entry according to a
   given pattern. This class emits events with the parsed log entries.
