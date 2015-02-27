@@ -1,5 +1,9 @@
 # RELEASE NOTES
 
+## v0.1.2 / 27 Feb 2015
+* Support reading slowly written multi-line logs, by retaining logs that are apparently complete (they match the
+  given pattern) but could be completed by upcoming log lines.
+
 ## v0.1.1 / 20 Feb 2015
 * Avoid reading already read data (sometimes the underlying watcher reports wrong stats, overlapping ranges).
 * Support reading logs whose lines are not completely written at the time the watcher reports a change in the file.
