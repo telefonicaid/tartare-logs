@@ -1,6 +1,6 @@
 {
   "name": "tartare-logs",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Watch log files parsing their content according to a given pattern",
   "license": "Apache-2.0",
   "author": "Jose Antonio Rodríguez Fernández <joseantonio.rodriguezfernandez@telefonica.com>",
