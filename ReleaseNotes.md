@@ -1,6 +1,6 @@
 # RELEASE NOTES
 
-## v0.2.0 / XXX
+## v0.2.0 / 19 Mar 2015
 * Added support for reading logs from a stream (such as stdout/stderr).
 
 ## v0.1.2 / 27 Feb 2015
