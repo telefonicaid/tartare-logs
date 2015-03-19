@@ -1,5 +1,8 @@
 # RELEASE NOTES
 
+## v0.2.0 / 19 Mar 2015
+* Added support for reading logs from a stream (such as stdout/stderr).
+
 ## v0.1.2 / 27 Feb 2015
 * Support reading slowly written multi-line logs, by retaining logs that are apparently complete (they match the
   given pattern) but could be completed by upcoming log lines.
