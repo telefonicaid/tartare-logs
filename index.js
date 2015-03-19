@@ -23,12 +23,12 @@
 
 module.exports = {
   LogWatcher: require('./lib/log-watcher'),
-  watchLog: function(logFilePath, pattern, fieldsNames, opts) {
-    return new module.exports.LogWatcher(logFilePath, pattern, fieldsNames, opts);
+  watchLog: function(source, pattern, fieldsNames, opts) {
+    return new module.exports.LogWatcher(source, pattern, fieldsNames, opts);
   },
   LogReader: require('./lib/log-reader'),
-  createLogReader: function(logFilePath, pattern, fieldsNames, opts) {
-    return new module.exports.LogReader(logFilePath, pattern, fieldsNames, opts);
+  createLogReader: function(source, pattern, fieldsNames, opts) {
+    return new module.exports.LogReader(source, pattern, fieldsNames, opts);
   },
   resilience: require('./lib/resilience'),
   chai: require('./lib/chai-plugin')
