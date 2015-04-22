@@ -1,5 +1,12 @@
 # RELEASE NOTES
 
+## v0.3.0 / XXX
+* `LogWatcher` accepts a function as `pattern` parameter.
+* Two new methods have been added to the `LogReader` class: `getLogs` and `getErrors`.
+* `LogReader.waitForLogsToExist` now accepts an options object as second parameter that can convey the timeout
+  and a new flag called `strict` that makes the function to fail if the first found log does not match the given 
+  template. Note that this change breaks backward compatibility.
+
 ## v0.2.0 / 19 Mar 2015
 * Added support for reading logs from a stream (such as stdout/stderr).
 
