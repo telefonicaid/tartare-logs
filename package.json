@@ -1,6 +1,6 @@
 {
   "name": "tartare-logs",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Watch log files parsing their content according to a given pattern",
   "license": "Apache-2.0",
   "author": "Jose Antonio Rodríguez Fernández <joseantonio.rodriguezfernandez@telefonica.com>",
@@ -26,11 +26,10 @@
     "watch"
   ],
   "dependencies": {
-    "rimraf": "2.2.8",
-    "watchr": "2.4.12"
+    "rimraf": "2.3.2"
   },
   "devDependencies": {
-    "eslint": "^0.11.0",
-    "jscs": "^1.9.0"
+    "eslint": "^0.19.0",
+    "jscs": "^1.12.0"
   }
 }
