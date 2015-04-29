@@ -1,6 +1,7 @@
 # RELEASE NOTES
 
-## v0.3.0 / XXX
+## v0.3.0 / 29 Apr 2015
+* Allow a polling strategy for filesystems where listening to file changes is not reliable or does not work at all.
 * `LogWatcher` accepts a function as `pattern` parameter.
 * Two new methods have been added to the `LogReader` class: `getLogs` and `getErrors`.
 * `LogReader.waitForLogsToExist` now accepts an options object as second parameter that can convey the timeout
