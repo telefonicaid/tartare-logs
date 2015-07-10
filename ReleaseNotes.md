@@ -1,5 +1,11 @@
 # RELEASE NOTES
 
+## v0.4.0 / 10 Jul 2015
+* Added support for reading logs in JSON format.
+* Changed the way `LogWatcher` and `LogReader` are configured, due to the extra parsing method added
+  (breaks backwards compatibility).
+* `LogReader.waitForLogsToExist` is renamed as `waitForLogToExist` (singular).
+
 ## v0.3.0 / 29 Apr 2015
 * Allow a polling strategy for filesystems where listening to file changes is not reliable or does not work at all.
 * `LogWatcher` accepts a function as `pattern` parameter.
