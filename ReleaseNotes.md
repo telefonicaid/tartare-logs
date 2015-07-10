@@ -1,6 +1,6 @@
 # RELEASE NOTES
 
-## v0.4.0 / XXX
+## v0.4.0 / 10 Jul 2015
 * Added support for reading logs in JSON format.
 * Changed the way `LogWatcher` and `LogReader` are configured, due to the extra parsing method added
   (breaks backwards compatibility).
