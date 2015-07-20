@@ -33,9 +33,10 @@ LogWatcher supports the following parsing methods:
 - **RegExp**: Each log entry is matched against a regular expression that contains capturing groups. Then the object
     with the parsed data is built using the captured data as field values whose names are taken from the array
     passed in the configuration.
-- **JSON**: Each log entry is considered a JSON document, and will be parsed as such.
+- **JSON**: Each log entry is considered a JSON document, and will be parsed as such. Logs can be optionally validated
+    against a JSON Schema.
 - **Custom**: Each log entry is passed to a custom function that receives a string with the log entry and returns the
-    object with the parsed data, or null if the log entry cannot be parsed.
+    object with the parsed data, or throws an Error if the log entry cannot be parsed.
 
 
 You can create a LogWatcher instance using any of these two ways:
@@ -56,10 +57,11 @@ depend on the method to be used to parse each log entry:
     - `pattern`: the regular expression containing capturing groups that will be matched against each log entry.
     - `fieldNames`: an Array of strings with the names of each captured value, in the same order than the capturing
         groups are in the regular expression.
-- JSON method: set a `json` property with a truthy value in the `config` object.
-- Custom method: set a `fn` property in the `config` file whose value is a function that will be called each time
+- JSON method: set a `json` property with a truthy value in the `config` object. Optionally set a `schema` property
+  with a JSON Schema (as a JavaScript object or as a String).
+- Custom method: set a `fn` property in the `config` object whose value is a function that will be called each time
     a new log entry is detected. This function receives a string with the log entry as argument and must return
-    an object with the parsed data, or null if it fails to parse the log entry.
+    an object with the parsed data, or throw an Error if it fails to parse the log entry.
 
   
 Moreover, LogWatcher has a couple of methods to start and stop watching logs:
@@ -148,7 +150,11 @@ The LogReader implements the following methods:
     arrives before a given timeout, the callback function is invoked with the found log as the second argument.
     If an error happens or no logs are found that match the template, the callback function is invoked with the error.
     The `template` is an object whose field names are the field names to search in the log, and whose values are
-    the expected values or regular expressions against which the log value will be matched.
+    the expected values or regular expressions against which the log value will be matched. Regular expressions can
+    be applied to any data type (values are internally stringified). If a template's field has de value `undefined`
+    this method will only check that the field exists, without checking the value in any way. All the field names
+    included in the template must exist in the log, but not all the fields in the log need to be in the template
+    for this method to success (that is, field names not included in the template are considered as irrelevant).
     The `opt` argument (optional) is an object with the following allowed options:
       - `timeout` (defaults to 3000ms): time (in ms) after which the callback function will be invoked with an
           error if no logs match the template.
@@ -257,4 +263,3 @@ submodule (`require('tartare-logs').resilience`):
 - `removeLogFS(path, cb)`: Remove the temporally file system created with the former function. 
 - `removeWritePermissionFromLogFile(logFile, cb)`: Remove write permissions to an existing file. 
 - `addWritePermissionToLogFile(logFile, cb)`: Add write permissions to an existing file.
-

@@ -1,5 +1,9 @@
 # RELEASE NOTES
 
+## v0.5.0 / XXX
+* JSON logs can be validated against a JSON Schema.
+* Templates passed to `LogReader.waitForLogToExist` now accept regexps against any data type and the `undefined` value.  
+
 ## v0.4.0 / 10 Jul 2015
 * Added support for reading logs in JSON format.
 * Changed the way `LogWatcher` and `LogReader` are configured, due to the extra parsing method added
