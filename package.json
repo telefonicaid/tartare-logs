@@ -1,6 +1,6 @@
 {
   "name": "tartare-logs",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Watch log files parsing their content according to a given pattern or as a JSON document",
   "license": "Apache-2.0",
   "author": "Jose Antonio Rodríguez Fernández <joseantonio.rodriguezfernandez@telefonica.com>",
@@ -26,6 +26,7 @@
     "watch"
   ],
   "dependencies": {
+    "is-my-json-valid": "2.12.0",
     "rimraf": "2.4.0"
   },
   "devDependencies": {
