@@ -6,7 +6,7 @@
   "author": "Jose Antonio Rodríguez Fernández <joseantonio.rodriguezfernandez@telefonica.com>",
   "main": "./index",
   "scripts": {
-    "lint": "jscs index.js lib && eslint index.js lib",
+    "lint": "eslint index.js lib",
     "prepublish": "npm run lint"
   },
   "repository": {
@@ -26,11 +26,12 @@
     "watch"
   ],
   "dependencies": {
-    "is-my-json-valid": "2.12.0",
-    "rimraf": "2.4.0"
+    "is-my-json-valid": "^2.13.1",
+    "rimraf": "^2.5.2"
   },
   "devDependencies": {
-    "eslint": "^0.22.1",
-    "jscs": "^1.13.1"
+    "eslint": "^2.12.0",
+    "eslint-config-google": "^0.5.0",
+    "eslint-plugin-jsdoc": "^2.3.1"
   }
 }
