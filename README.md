@@ -5,7 +5,8 @@
 [tartare-chai](https://github.com/telefonicaid/tartare-chai/) |
 [tartare-mock](https://github.com/telefonicaid/tartare-mock/) |
 [tartare-util](https://github.com/telefonicaid/tartare-util/) |
-[tartare-collections](https://github.com/telefonicaid/tartare-collections/)
+[tartare-collections](https://github.com/telefonicaid/tartare-collections/) |
+[protractor-tartare](https://github.com/telefonicaid/protractor-tartare/)
 
 ---
 

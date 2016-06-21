@@ -1,5 +1,8 @@
 # RELEASE NOTES
 
+## v1.0.0 / 21 Jun 2016
+* Ignore fields with `undefined` value when using the RegExp parsing method and some capture group matches nothing.
+
 ## v0.5.0 / 22 Jul 2015
 * JSON logs can be validated against a JSON Schema.
 * Templates passed to `LogReader.waitForLogToExist` now accept regexps against any data type and the `undefined` value.  
